@@ -1,0 +1,3 @@
+add bootstrap-sass gem
+change sqlite3 to pg-gem
+modify config/database.yml
