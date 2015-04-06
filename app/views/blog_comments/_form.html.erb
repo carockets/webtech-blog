@@ -19,11 +19,8 @@
     <%= f.label :content %><br>
     <%= f.text_area :content, type: 'text', class: 'form-control' %>
   </div>
-  <div class="form-group">
-    <%= f.label :time %><br>
-    <%= f.datetime_select :time %>
-  </div>
+  <%= f.hidden_field :blog_item_id %>
   <div class="actions">
-    <%= f.submit :class => 'btn btn-default btn-form-submit' %>
+    <%= f.submit :class => 'btn btn-sm btn-form-submit' %>
   </div>
 <% end %>

@@ -7,7 +7,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">
-    	<%= item.name %>
+    	<%= link_to item.name, item %> (Comments: <%= item.blog_comments.size %>)
     	<div style="float: right;">
 	    	<%= link_to "Edit", edit_blog_item_path(item) %>
 	    	<%= link_to "Delete", item, method: :delete, data: { confirm: 'Are you sure?' } %>

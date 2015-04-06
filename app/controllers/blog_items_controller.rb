@@ -10,6 +10,9 @@ class BlogItemsController < ApplicationController
   # GET /blog_items/1
   # GET /blog_items/1.json
   def show
+    @blog_item = BlogItem.find(params[:id])
+    @blog_comments = @blog_item.blog_comments.all
+    @blog_comment = @blog_item.blog_comments.build
   end
 
   # GET /blog_items/new
@@ -28,7 +31,7 @@ class BlogItemsController < ApplicationController
 
     respond_to do |format|
       if @blog_item.save
-        format.html { redirect_to @blog_item, notice: 'Blog item was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Blog item was successfully created.' }
         format.json { render action: 'show', status: :created, location: @blog_item }
       else
         format.html { render action: 'new' }
@@ -56,7 +59,7 @@ class BlogItemsController < ApplicationController
   def destroy
     @blog_item.destroy
     respond_to do |format|
-      format.html { redirect_to blog_items_url }
+      format.html { redirect_to root_url }
       format.json { head :no_content }
     end
   end

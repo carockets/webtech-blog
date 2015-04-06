@@ -1,12 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h2>
   <%= @blog_item.name %>
-</p>
-
+</h2>
+<hr>
 <p>
-  <strong>Content:</strong>
   <%= @blog_item.content %>
 </p>
 
@@ -16,9 +14,29 @@
 </p>
 
 <p>
-  <strong>Time:</strong>
+  <strong>Created at:</strong>
   <%= @blog_item.time %>
 </p>
+<hr>
+
+<h3>Comments</h3>
+<% @blog_comments.each do |comment| %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+    	From: <%= comment.name %>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <%= comment.content %>
+  </div>
+</div>  
+<% end %>
+<br/>
+<h4>New comment:</h4> <br/>
+<%= render 'blog_comments/form' %>
+<br/ >
+
 
 <%= link_to 'Edit', edit_blog_item_path(@blog_item) %> |
 <%= link_to 'Back', blog_items_path %>

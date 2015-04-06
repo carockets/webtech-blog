@@ -7,7 +7,7 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: task_app_development
+  database: blog_app_development
   username: carola
   password: 
   pool: 5
@@ -19,18 +19,9 @@ development:
 development:
   adapter: postgresql
   encoding: utf8
-  database: task_app_test
+  database: blog_app_test
   username: carola
   password: 
-  pool: 5
-  timeout: 5000
-
-development:
-  adapter: postgresql
-  encoding: utf8
-  database: task_app_prod
-  username: carola
-  password:
   pool: 5
   timeout: 5000
 

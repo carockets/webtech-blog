@@ -28,7 +28,7 @@ class BlogCommentsController < ApplicationController
 
     respond_to do |format|
       if @blog_comment.save
-        format.html { redirect_to @blog_comment, notice: 'Blog comment was successfully created.' }
+        format.html { redirect_to root_url notice: 'Blog comment was successfully created.' }
         format.json { render action: 'show', status: :created, location: @blog_comment }
       else
         format.html { render action: 'new' }
@@ -69,6 +69,6 @@ class BlogCommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_comment_params
-      params.require(:blog_comment).permit(:name, :content, :time)
+      params.require(:blog_comment).permit(:name, :content, :time, :blog_item_id)
     end
 end
