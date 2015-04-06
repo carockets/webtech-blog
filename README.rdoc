@@ -1,28 +1,5 @@
-== README
+== Simple Blog Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the code base for the ruby on rails tutorial part II which was created at the seminar "Web Technologies - Frameworks, Libraries and Plattforms"
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This project was built with Rails 4.0.1 and Ruby 2.0 as well as the postgres database for easy heroku deployment.
